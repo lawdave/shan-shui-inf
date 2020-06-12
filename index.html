@@ -3994,7 +3994,7 @@
   }
 
   function calcViewBox() {
-    var zoom = 1.142;
+    var zoom = 1.0; //   var zoom = 1.142;
     return "" + MEM.cursx + " 0 " + MEM.windx / zoom + " " + MEM.windy / zoom;
   }
 
@@ -4065,13 +4065,13 @@
       viewupdate();
     }
   }
-  function autoxcroll(v) {
-    if (document.getElementById("AUTO_SCROLL").checked) {
-      xcroll(v);
-      setTimeout(function() {
-        autoxcroll(v);
-      }, 2000);
-    }
+  function autoxcroll(v) { // DISABLED
+    // if (document.getElementById("AUTO_SCROLL").checked) {
+    //  xcroll(v);
+    //  setTimeout(function() {
+    //    autoxcroll(v);
+    //  }, 2000);
+    // }
   }
   function rstyle(id, b) {
     var a = b ? 0.1 : 0.0;
