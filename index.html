@@ -3865,6 +3865,8 @@ function sleep(duration) {
       sleep(5);
       console.log("requesting render in chunkloader");
       self.chunkrender(xmin, xmax);
+     console.log("requesting chunkshow in chunkloader");
+       self.chunkshow();
       if (MEM.chunks.length == 0) {
         MEM.chunks.push(nch);
         return;
@@ -4031,13 +4033,9 @@ function sleep(duration) {
     return true;
   }
 
-  function update() {
-    console.log("update!")
-
-    self.chunkloader(MEM.cursx, MEM.cursx + MEM.windx);
-    self.chunkrender(MEM.cursx, MEM.cursx + MEM.windx);
-
-    document.getElementById("BG").innerHTML =
+function chunkshow(); // new function at 205 am 
+	{
+      document.getElementById("BG").innerHTML =
       "<svg id='SVG' xmlns='http://www.w3.org/2000/svg' width='" +
       MEM.windx +
       "' height='" +
@@ -4052,6 +4050,14 @@ function sleep(duration) {
       MEM.canv +
       //+ "<circle cx='0' cy='0' r='50' stroke='black' fill='red' />" // COMMENT ME OUT - RED CIRCLE
       "</g></svg>";
+	}
+	
+  function update() {
+    console.log("update!")
+
+    self.chunkloader(MEM.cursx, MEM.cursx + MEM.windx);
+    // self.chunkrender(MEM.cursx, MEM.cursx + MEM.windx); // already doing this in each chunkload
+
 
     //setTimeout(update,1000);
   }
