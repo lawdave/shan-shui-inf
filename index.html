@@ -3846,14 +3846,9 @@
  * 
  * @param duration Enter duration in seconds
  */
-function sleep(duration) {
-	console.log("requesting sleep for "+duration);
-	return new Promise(resolve => {
-		setTimeout(() => {
-			resolve()
-		}, duration * 1000)
-	})
-}
+function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+	
   
   function chunkloader(xmin, xmax) {
     var add = function(nch) {
@@ -3862,7 +3857,7 @@ function sleep(duration) {
         console.log(nch.tag);
         nch.canv = nch.canv.replace(/NaN/g, -1000);
       }
-      sleep(5);
+       await sleep(3000);
       console.log("requesting render in chunkloader");
       self.chunkrender(xmin, xmax);
      console.log("requesting chunkshow in chunkloader");
@@ -4055,12 +4050,12 @@ function chunkshow() // new function at 205 am
 	}
 	
   function update() {
-    console.log("start update!");
+    console.log("start update - new sleep code!");
 
     self.chunkloader(MEM.cursx, MEM.cursx + MEM.windx);
     // self.chunkrender(MEM.cursx, MEM.cursx + MEM.windx); // already doing this in each chunkload
     console.log("end update - going to sleep");
-	  sleep(500);
+	   await sleep(3000);
 	   console.log("end update - sleep done");
 
     //setTimeout(update,1000);
