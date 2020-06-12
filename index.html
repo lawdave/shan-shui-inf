@@ -3849,6 +3849,7 @@
         console.log(nch.tag);
         nch.canv = nch.canv.replace(/NaN/g, -1000);
       }
+      update(); // NEW CODE
       if (MEM.chunks.length == 0) {
         MEM.chunks.push(nch);
         return;
@@ -3887,8 +3888,6 @@
 
       for (var i = 0; i < plan.length; i++) {
         console.log("Plan:"+plan[i].tag); //** logging plan 
-        update(); // NEW CODE
-        console.log("requesting update"); // logging plan // NEW CODE
         if (plan[i].tag == "mount") {
           add({
             tag: plan[i].tag,
