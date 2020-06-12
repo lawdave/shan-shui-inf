@@ -3887,6 +3887,8 @@
 
       for (var i = 0; i < plan.length; i++) {
         console.log("Plan:"+plan[i].tag); //** logging plan 
+        update(); // NEW CODE
+        console.log("requesting update"); // logging plan // NEW CODE
         if (plan[i].tag == "mount") {
           add({
             tag: plan[i].tag,
@@ -4290,9 +4292,9 @@
               .getElementById("BG")
               .setAttribute("style", "width:" + MEM.windx + "px");
             update();
-            document.body.scrollTo(0, 0);
+           //  document.body.scrollTo(0, 0); // autoscrolled
             console.log(["SCROLLX", window.scrollX]);
-            present();
+           // present() // autoscrolled 
            //draw(); // Function not defined
           </script>
         </div>
