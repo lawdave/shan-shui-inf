@@ -4055,11 +4055,13 @@ function chunkshow() // new function at 205 am
 	}
 	
   function update() {
-    console.log("update!")
+    console.log("start update!");
 
     self.chunkloader(MEM.cursx, MEM.cursx + MEM.windx);
     // self.chunkrender(MEM.cursx, MEM.cursx + MEM.windx); // already doing this in each chunkload
-
+    console.log("end update - going to sleep");
+	  sleep(500);
+	   console.log("end update - sleep done");
 
     //setTimeout(update,1000);
   }
