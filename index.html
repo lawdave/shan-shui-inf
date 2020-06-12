@@ -4234,16 +4234,6 @@ function chunkshow() // new function at 205 am
         <div id="BG">
           <script>
             console.log("at line 4236 under div script");
-	    MEM.lasttick = new Date().getTime();
-            document.getElementById("INP_SEED").value = SEED;
-            document
-              .getElementById("BG")
-              .setAttribute("style", "width:" + MEM.windx + "px");
-            update();
-           //  document.body.scrollTo(0, 0); // autoscrolled
-            console.log(["SCROLLX", window.scrollX]);
-           // present() // autoscrolled 
-           //draw(); // Function not defined
           </script>
         </div>
       </td>
@@ -4371,3 +4361,16 @@ console.log ("at very end");
   var btnHoverCol = "rgba(0,0,0,0.1)";
   console.log ("UI now at very end");
 </script>
+<script>
+            console.log("at line 4365 last script");
+	    MEM.lasttick = new Date().getTime();
+            document.getElementById("INP_SEED").value = SEED;
+            document
+              .getElementById("BG")
+              .setAttribute("style", "width:" + MEM.windx + "px");
+            update();
+           //  document.body.scrollTo(0, 0); // autoscrolled
+            console.log(["SCROLLX", window.scrollX]);
+           // present() // autoscrolled 
+           //draw(); // Function not defined
+          </script>
