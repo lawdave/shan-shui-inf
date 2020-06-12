@@ -3842,6 +3842,18 @@
     }
   }
 
+  /**
+ * 
+ * @param duration Enter duration in seconds
+ */
+function sleep(duration) {
+	return new Promise(resolve => {
+		setTimeout(() => {
+			resolve()
+		}, duration * 1000)
+	})
+}
+  
   function chunkloader(xmin, xmax) {
     var add = function(nch) {
       if (nch.canv.includes("NaN")) {
@@ -3849,6 +3861,7 @@
         console.log(nch.tag);
         nch.canv = nch.canv.replace(/NaN/g, -1000);
       }
+      sleep(1);
       console.log("requesting render in chunkloader");
       self.chunkrender(xmin, xmax);
       if (MEM.chunks.length == 0) {
