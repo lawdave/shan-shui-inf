@@ -4312,7 +4312,7 @@
             document.body.scrollTo(0, 0);
             console.log(["SCROLLX", window.scrollX]);
             present();
-            //draw();
+            draw(); ///draw(); // THIS WAS COMMENTED OUT
           </script>
         </div>
       </td>
@@ -4334,9 +4334,10 @@
   </table>
 </body>
 
-<canvas id="bgcanv" width="512" height="512" > </canvas>
+<canvas id="bgcanv" width="512" height="512" HIDDEN> </canvas>
 <script>
-  console.log ("not hidden");
+  // BACKGROUND
+  console.log ("at BG - now hidden");
   var canvas = document.getElementById("bgcanv");
   var ctx = canvas.getContext("2d");
   var reso = 512;
