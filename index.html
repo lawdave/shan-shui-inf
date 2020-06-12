@@ -3821,8 +3821,8 @@
     cwid: 512,
     cursx: 0,
     lasttick: 0,
-    windx: 3000,
-    windy: 800,
+    windx: 1000, //3000
+    windy: 500, //800
     planmtx: [],
   };
 
@@ -4034,7 +4034,7 @@
       0 +
       ",0)'>" +
       MEM.canv +
-      + "<circle cx='0' cy='0' r='50' stroke='black' fill='red' />" // COMMENT ME OUT - RED CIRCLE
+      //+ "<circle cx='0' cy='0' r='50' stroke='black' fill='red' />" // COMMENT ME OUT - RED CIRCLE
       "</g></svg>";
 
     //setTimeout(update,1000);
@@ -4252,25 +4252,6 @@
     </div>
   </div>
 
-  <div
-    id="SOURCE_BTN"
-    style="
-      position:fixed; 
-      z-index:1000; 
-      left: 77; 
-      top: 3;
-      width:32;
-      height:32;
-      color:rgba(0,0,0,0.4);
-      border: 1px solid rgba(0,0,0,0.4);
-      text-align: center;
-      display: table;
-      cursor: pointer;"
-    onmouseover="document.getElementById('SOURCE_BTN').style.backgroundColor=btnHoverCol"
-    onmouseout="document.getElementById('SOURCE_BTN').style.backgroundColor='rgba(0,0,0,0)'"
-    onclick="window.location='https://github.com/LingDong-/shan-shui-inf';"
-    title="Fork me on Github!"
-  >
     <div style="display:table-cell; vertical-align: middle;">
       <font id="SET_BTN.t" size="4px"> &lt;/&gt; </font>
     </div>
