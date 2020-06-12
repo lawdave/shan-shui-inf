@@ -4346,7 +4346,7 @@
       var c = 245 + Noise.noise(i * 0.1, j * 0.1) * 10;
       c -= Math.random() * 20;
 
-      var r = 30; // var r = c.toFixed(0);
+      var r = c.toFixed(0); // BACKGROUND COLORS
       var g = (c * 0.95).toFixed(0);
       var b = (c * 0.85).toFixed(0);
       ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
