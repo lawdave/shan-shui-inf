@@ -3862,7 +3862,7 @@ function sleep(duration) {
         console.log(nch.tag);
         nch.canv = nch.canv.replace(/NaN/g, -1000);
       }
-      sleep(1);
+      sleep(5);
       console.log("requesting render in chunkloader");
       self.chunkrender(xmin, xmax);
       if (MEM.chunks.length == 0) {
