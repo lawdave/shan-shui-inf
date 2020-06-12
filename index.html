@@ -3849,7 +3849,8 @@
         console.log(nch.tag);
         nch.canv = nch.canv.replace(/NaN/g, -1000);
       }
-      update(); // NEW CODE
+      console.log("requesting render in chunkloader");
+      self.chunkrender(xmin, xmax);
       if (MEM.chunks.length == 0) {
         MEM.chunks.push(nch);
         return;
