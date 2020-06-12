@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("semicolon fixed");
+  console.log ("semicolon fixed; new sleep code 3");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -3848,7 +3848,8 @@
  * @param duration Enter duration in seconds
  */
 function sleep(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms));
+      for (var i = 1; i<ms; i+=0.0001)
+      {}
 }
 	
   function chunkloader(xmin, xmax) {
@@ -3858,7 +3859,7 @@ function sleep(ms) {
         console.log(nch.tag);
         nch.canv = nch.canv.replace(/NaN/g, -1000);
       }
-       await sleep(3000);
+       sleep(3000);
       console.log("requesting render in chunkloader");
       self.chunkrender(xmin, xmax);
      console.log("requesting chunkshow in chunkloader");
@@ -4056,7 +4057,7 @@ function chunkshow() // new function at 205 am
     self.chunkloader(MEM.cursx, MEM.cursx + MEM.windx);
     // self.chunkrender(MEM.cursx, MEM.cursx + MEM.windx); // already doing this in each chunkload
     console.log("end update - going to sleep");
-	   await sleep(3000);
+	   sleep(3000);
 	   console.log("end update - sleep done");
 
     //setTimeout(update,1000);
