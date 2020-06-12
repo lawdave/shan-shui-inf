@@ -3886,7 +3886,7 @@
       }
 
       for (var i = 0; i < plan.length; i++) {
-        console.log("Plan:"+plan[i].tag); //** HERE 
+        console.log("Plan:"+plan[i].tag); //** logging plan 
         if (plan[i].tag == "mount") {
           add({
             tag: plan[i].tag,
@@ -4334,7 +4334,7 @@
   </table>
 </body>
 
-<canvas id="bgcanv" width="512" height="512" hidden> </canvas>
+<canvas id="bgcanv" width="512" height="512" > </canvas>
 <script>
   var canvas = document.getElementById("bgcanv");
   var ctx = canvas.getContext("2d");
