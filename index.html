@@ -4233,7 +4233,8 @@ function chunkshow() // new function at 205 am
       <td>
         <div id="BG">
           <script>
-            MEM.lasttick = new Date().getTime();
+            console.log("at line 4236 under div script");
+	    MEM.lasttick = new Date().getTime();
             document.getElementById("INP_SEED").value = SEED;
             document
               .getElementById("BG")
