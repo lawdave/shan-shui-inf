@@ -1182,7 +1182,7 @@
           rglist[i].map(function(v) {
             return [v[0] + x, v[1] + y];
           }),
-          { wid: 1.5, col: "rgba(100,100,100,0.7)", out: 0 },
+          { wid: 1.5, col: "rgba(200,100,100,0.7)", out: 0 },
         );
       }
       return canv;
@@ -1192,7 +1192,7 @@
       var args = args != undefined ? args : {};
       var hei = args.hei != undefined ? args.hei : 300;
       var wid = args.wid != undefined ? args.wid : 6;
-      var col = args.col != undefined ? args.col : "rgba(100,100,100,0.5)";
+      var col = args.col != undefined ? args.col : "rgba(100,200,100,0.5)";
       var noi = args.noi != undefined ? args.noi : 0.5;
 
       var canv = "";
@@ -1261,7 +1261,7 @@
         }),
         {
           col:
-            "rgba(100,100,100," + (0.4 + Math.random() * 0.1).toFixed(3) + ")",
+            "rgba(100,100,200," + (0.4 + Math.random() * 0.1).toFixed(3) + ")",
           wid: 2.5,
           fun: function(x) {
             return Math.sin(1);
@@ -1280,7 +1280,7 @@
       var args = args != undefined ? args : {};
       var hei = args.hei != undefined ? args.hei : 300;
       var wid = args.wid != undefined ? args.wid : 5;
-      var col = args.col != undefined ? args.col : "rgba(100,100,100,0.5)";
+      var col = args.col != undefined ? args.col : "rgba(200,200,100,0.5)";
       var noi = args.noi != undefined ? args.noi : 0.5;
 
       var canv = "";
@@ -1356,7 +1356,7 @@
         }),
         {
           col:
-            "rgba(100,100,100," + (0.4 + Math.random() * 0.1).toFixed(3) + ")",
+            "rgba(100,200,200," + (0.4 + Math.random() * 0.1).toFixed(3) + ")",
           wid: 2.5,
           fun: function(x) {
             return Math.sin(1);
