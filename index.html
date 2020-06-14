@@ -4380,3 +4380,16 @@
             //present();
             //draw();
           </script>
+
+          <script DEFER>
+            //MEM.lasttick = new Date().getTime();
+            console.log("SECOND PASS THROUGH - STILL STALLED?);
+            document.getElementById("INP_SEED").value = SEED+1;
+            console.log("about to update");
+            update();
+            //document.body.scrollTo(0, 0);
+            //console.log(["SCROLLX", window.scrollX]);
+            console.log("Done2");
+            //present();
+            //draw();
+          </script>
