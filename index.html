@@ -4310,7 +4310,7 @@
     onclick="window.location='https://github.com/LingDong-/shan-shui-inf';"
     title="Fork me on Github!"
   >
-    <div style="display:table-cell; vertical-align: middle;">
+    <div style="display:table-cell; vertical-align: middle; visibility:hidden">
       <font id="SET_BTN.t" size="4px"> &lt;/&gt; </font>
     </div>
     <script>
@@ -4368,22 +4368,21 @@
             document.getElementsByTagName("body")[0].style.backgroundImage =
               "url(" + img + ")";
           </script>
-
-          
+        </div>
+      </td>
           <script>
-            MEM.lasttick = new Date().getTime();
+            //MEM.lasttick = new Date().getTime();
             document.getElementById("INP_SEED").value = SEED;
             document
               .getElementById("BG")
               .setAttribute("style", "width:" + MEM.windx + "px");
             update();
-            document.body.scrollTo(0, 0);
+            //document.body.scrollTo(0, 0);
             console.log(["SCROLLX", window.scrollX]);
-            present();
+            //present();
             //draw();
           </script>
-        </div>
-      </td>
+
 
       <td>
         <div
