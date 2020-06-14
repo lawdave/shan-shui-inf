@@ -492,12 +492,12 @@
     console.log ("stroking poly");
       var canv = "<polyline points='";
     for (var i = 0; i < plist.length; i++) {
-    //  contxt.lineWidth = 0.5;
-    //  contxt.strokeStyle = 'red';
-    //  contxt.lineTo((plist[i][0] + xof).toFixed(1), (plist[i][1] + yof).toFixed(1));
-   //   contxt.stroke();
+      contxt.lineWidth = 0.5;
+      contxt.strokeStyle = 'red';
+      contxt.lineTo((plist[i][0] + xof).toFixed(1), (plist[i][1] + yof).toFixed(1));
+     contxt.stroke();
       
-      console.log ("about to context.stroke "+(plist[i][0] + xof).toFixed(1)+"  "+(plist[i][1] + yof).toFixed(1));
+   //   console.log ("about to context.stroke "+(plist[i][0] + xof).toFixed(1)+"  "+(plist[i][1] + yof).toFixed(1));
       canv +=
         " " +
         (plist[i][0] + xof).toFixed(1) +
