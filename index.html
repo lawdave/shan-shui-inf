@@ -3989,14 +3989,13 @@
     MEM.canv = "";
 
     
-    //for (var i = 0; i < MEM.chunks.length; i++) {
-     for (var i = 0; i < MEM.chunks.length-5; i++) {
-      if (
+     for (var i = 0; i < MEM.chunks.length; i++) {
+       if (
         xmin - MEM.cwid < MEM.chunks[i].x &&
         MEM.chunks[i].x < xmax + MEM.cwid
       ) {
         MEM.canv += MEM.chunks[i].canv;
-        console.log ("rendering chunk number "+i+" and about to try to display it - stopping some chunks early");
+        console.log ("rendering chunk number "+i+" and about to try to display it - now showing all again");
         displayNew();
       }
     }
@@ -4056,17 +4055,15 @@
   
     function update() {
     
-    console.log("update!")
+    console.log("update! - no self")
 
-    self.chunkloader(MEM.cursx, MEM.cursx + MEM.windx);
-    self.chunkrender(MEM.cursx, MEM.cursx + MEM.windx);
+    chunkloader(MEM.cursx, MEM.cursx + MEM.windx);
+    chunkrender(MEM.cursx, MEM.cursx + MEM.windx);
     console.log ("NO LAST DISPLAYNEW -- WILL IT LOAD?");
       // displayNew(); - stripped last displaynew
     
     //setTimeout(update,1000);
   }
-  
-   
 </script>
 
 <script id="downloader">
