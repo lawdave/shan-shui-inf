@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("top log 5");
+  console.log ("top log 6");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4327,22 +4327,8 @@
     </script>
   </div>
 
-  <table style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+  <table width=1000 height=400 style="border-bottom: 1px solid rgba(0,0,0,0.1);">
     <tr>
-      <td>
-        <div
-          id="L"
-          onmouseover="rstyle('L',true)"
-          onmouseout="rstyle('L',false)"
-          onclick="xcroll(-200)"
-          style="visibility:hidden"
-        >
-          <div id="L.t" style="visibility:hidden"><font size="6px">&#x3008;</font></div>
-          <script>
-            rstyle("L", false);
-          </script>
-        </div>
-      </td>
       <td width="1000" height="400">
         <div id="BG">
             <canvas id="bgcanv" width="1000" height="400" hidden> </canvas>
@@ -4371,22 +4357,6 @@
             document.getElementById("BG").style.backgroundImage = "url(" + img + ")";
             document.getElementsByTagName("body")[0].style.backgroundImage =
               "url(" + img + ")";
-          </script>
-        </div>
-      </td>
-<!-- //SCRIPT WAS HERE -->
-
-      <td>
-        <div
-          id="R"
-          onmouseover="rstyle('R',true)"
-          onmouseout="rstyle('R',false)"
-          onclick="xcroll(200)"
-          style="visibility:hidden"
-        >
-          <div id="R.t" style="visibility:hidden"><font size="6px">&#x3009;</font></div>
-          <script>
-            //rstyle("R", false);
           </script>
         </div>
       </td>
