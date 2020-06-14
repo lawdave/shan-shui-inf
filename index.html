@@ -3988,13 +3988,15 @@
   function chunkrender(xmin, xmax) {
     MEM.canv = "";
 
-    for (var i = 0; i < MEM.chunks.length; i++) {
+    
+    //for (var i = 0; i < MEM.chunks.length; i++) {
+     for (var i = 0; i < MEM.chunks.length-5; i++) {
       if (
         xmin - MEM.cwid < MEM.chunks[i].x &&
         MEM.chunks[i].x < xmax + MEM.cwid
       ) {
         MEM.canv += MEM.chunks[i].canv;
-        console.log ("rendering chunk number "+i+" and about to try to display it");
+        console.log ("rendering chunk number "+i+" and about to try to display it - stopping some chunks early");
         displayNew();
       }
     }
