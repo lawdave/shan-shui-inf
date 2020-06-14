@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("top log 14 - force size ");
+  console.log ("top log 15 - two passes ");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4381,10 +4381,8 @@
             console.log("Done - forced TD size");
             //present();
             //draw();
-          </script>
-
-          <script>
-            //MEM.lasttick = new Date().getTime();
+            
+            //DELETE BELOW HERE TO SCRIPT?
             console.log("SECOND PASS THROUGH - STILL STALLED?);
             document.getElementById("INP_SEED").value = SEED+1;
             console.log("about to update");
