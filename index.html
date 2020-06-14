@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("top log 10 - remove alert");
+  console.log ("top log 11 - remove splice logs");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -3868,17 +3868,17 @@
       } else {
         if (nch.y <= MEM.chunks[0].y) {
           MEM.chunks.unshift(nch);
-          console.log ("UNSHIFT nch");
+          //console.log ("UNSHIFT nch");
           return;
         } else if (nch.y >= MEM.chunks[MEM.chunks.length - 1].y) {
           MEM.chunks.push(nch);
-           console.log ("PUSH nch");
+           //console.log ("PUSH nch");
           return;
         } else {
           for (var j = 0; j < MEM.chunks.length - 1; j++) {
             if (MEM.chunks[j].y <= nch.y && nch.y <= MEM.chunks[j + 1].y) {
               MEM.chunks.splice(j + 1, 0, nch);
-              console.log ("SPLICE nch");
+              //console.log ("SPLICE nch");
               return;
             }
           }
@@ -4364,9 +4364,9 @@
   </table>
 </body>
 <!-- //MOVED from "SCRIPT WAS HERE"--> 
-          <script DEFER>
+          <script>
             //MEM.lasttick = new Date().getTime();
-            console.log("starting final script - with DEFER");
+            console.log("FIRST PASS starting final script");
             document.getElementById("INP_SEED").value = SEED;
             document
               .getElementById("BG")
@@ -4381,7 +4381,7 @@
             //draw();
           </script>
 
-          <script DEFER>
+          <script>
             //MEM.lasttick = new Date().getTime();
             console.log("SECOND PASS THROUGH - STILL STALLED?);
             document.getElementById("INP_SEED").value = SEED+1;
