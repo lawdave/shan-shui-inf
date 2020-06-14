@@ -4372,19 +4372,8 @@
           </script>
         </div>
       </td>
-          <script>
-            //MEM.lasttick = new Date().getTime();
-            document.getElementById("INP_SEED").value = SEED;
-            document
-              .getElementById("BG")
-              .setAttribute("style", "width:" + MEM.windx + "px");
-            update();
-            //document.body.scrollTo(0, 0);
-            console.log(["SCROLLX", window.scrollX]);
-            //present();
-            //draw();
-          </script>
 
+//SCRIPT WAS HERE
 
       <td>
         <div
@@ -4403,3 +4392,16 @@
   </table>
 </body>
 
+//MOVED from "SCRIPT WAS HERE"
+          <script>
+            //MEM.lasttick = new Date().getTime();
+            document.getElementById("INP_SEED").value = SEED;
+            document
+              .getElementById("BG")
+              .setAttribute("style", "width:" + MEM.windx + "px");
+            update();
+            //document.body.scrollTo(0, 0);
+            console.log(["SCROLLX", window.scrollX]);
+            //present();
+            //draw();
+          </script>
