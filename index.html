@@ -1368,6 +1368,8 @@
 
       canv += txcanv;
       canv += twcanv;
+      console.log ("canv: ");
+      console.log(canv);
       return canv;
     };
 
@@ -1719,7 +1721,8 @@
 
       canv += txcanv;
       canv += twcanv;
-      //console.log(canv)
+      console.log ("canv: ");
+      console.log(canv);
       return canv;
     };
   }();
@@ -4338,7 +4341,7 @@
   var canvas = document.getElementById("bgcanv");
   var ctx = canvas.getContext("2d");
   var reso = 1920;
-
+  console.log ("1080p background");
   for (var i = 0; i < reso / 2 + 1; i++) {
     for (var j = 0; j < reso / 2 + 1; j++) {
       var c = 245 + Noise.noise(i * 0.1, j * 0.1) * 10;
