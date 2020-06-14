@@ -4026,13 +4026,9 @@
     return true;
   }
 
-  function update() {
-    console.log("update!")
-
-    self.chunkloader(MEM.cursx, MEM.cursx + MEM.windx);
-    self.chunkrender(MEM.cursx, MEM.cursx + MEM.windx);
-   
-    console.log ("updating with x,y: "+MEM.windx+", "+MEM.windy);
+  function displayNew ()
+  { 
+      console.log ("updating with x,y: "+MEM.windx+", "+MEM.windy);
     document.getElementById("BG").innerHTML =
       "<svg id='SVG' xmlns='http://www.w3.org/2000/svg' width='" +
       MEM.windx +
@@ -4048,9 +4044,20 @@
       MEM.canv +
       //+ "<circle cx='0' cy='0' r='50' stroke='black' fill='red' />"
       "</g></svg>";
+  }
+  
+  
+  function update() {
+    console.log("update!")
 
+    self.chunkloader(MEM.cursx, MEM.cursx + MEM.windx);
+    self.chunkrender(MEM.cursx, MEM.cursx + MEM.windx);
+    displayNew();
+    
     //setTimeout(update,1000);
   }
+  
+   
 </script>
 
 <script id="downloader">
