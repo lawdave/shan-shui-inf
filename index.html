@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("top log 16 - close quote in last script ");
+  console.log ("top log 17 - onload ");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4162,20 +4162,36 @@
   }
   var btnHoverCol = "rgba(0,0,0,0.1)";
 </script>
+          <script>
+            //MEM.lasttick = new Date().getTime();
+            function makepictures() {
+              console.log("FIRST PASS starting final script");
+              document.getElementById("INP_SEED").value = SEED;
+              document
+                .getElementById("BG")
+                .setAttribute("style", "width:" + MEM.windx + "px");
+              console.log("style" + "width:" + MEM.windx + "px");
+              console.log("about to update");
+              update();
+              //document.body.scrollTo(0, 0);
+              //console.log(["SCROLLX", window.scrollX]);
+              console.log("Done - forced TD size");
+              //present();
+              //draw();
 
-<body style="margin:0">
-   <script>
-    // TEST HERE 
-    console.log ("**INITIALIZING PAINTCANV HERE**");
-    const paintcanv = document.getElementById('paintcanv');
-    const contxt = paintcanv.getContext('2d');
-    
-    contxt.beginPath();
-    contxt.arc(95, 50, 40, 0, 2 * Math.PI);
-    contxt.stroke();
-     
-  </script>
-  
+              //DELETE BELOW HERE TO SCRIPT?
+              console.log("SECOND PASS THROUGH - STILL STALLED?");
+              document.getElementById("INP_SEED").value = SEED+1;
+              console.log("about to update");
+              update();
+              //document.body.scrollTo(0, 0);
+              //console.log(["SCROLLX", window.scrollX]);
+              console.log("Done2");
+
+            }
+=
+          </script>
+<body style="margin:0" onload="makepictures();">  
   <div
     id="SETTING"
     style="
@@ -4365,31 +4381,4 @@
     </tr>
   </table>
 </body>
-<!-- //MOVED from "SCRIPT WAS HERE"--> 
-          <script>
-            //MEM.lasttick = new Date().getTime();
-            console.log("FIRST PASS starting final script");
-            document.getElementById("INP_SEED").value = SEED;
-            document
-              .getElementById("BG")
-              .setAttribute("style", "width:" + MEM.windx + "px");
-            console.log("style" + "width:" + MEM.windx + "px");
-            console.log("about to update");
-            update();
-            //document.body.scrollTo(0, 0);
-            //console.log(["SCROLLX", window.scrollX]);
-            console.log("Done - forced TD size");
-            //present();
-            //draw();
-            
-            //DELETE BELOW HERE TO SCRIPT?
-            console.log("SECOND PASS THROUGH - STILL STALLED?");
-            document.getElementById("INP_SEED").value = SEED+1;
-            console.log("about to update");
-            update();
-            //document.body.scrollTo(0, 0);
-            //console.log(["SCROLLX", window.scrollX]);
-            console.log("Done2");
-            //present();
-            //draw();
-          </script>
+
