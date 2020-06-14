@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("top log 8");
+  console.log ("top log 9 - defer");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4364,11 +4364,10 @@
     </tr>
   </table>
 </body>
-                        
 <!-- //MOVED from "SCRIPT WAS HERE"--> 
-          <script ASYNC>
+          <script DEFER>
             //MEM.lasttick = new Date().getTime();
-            console.log("starting final script - with ASYNC");
+            console.log("starting final script - with DEFER");
             document.getElementById("INP_SEED").value = SEED;
             document
               .getElementById("BG")
