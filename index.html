@@ -4334,16 +4334,16 @@
           onmouseover="rstyle('L',true)"
           onmouseout="rstyle('L',false)"
           onclick="xcroll(-200)"
+          style="visibility:hidden
         >
-          <div id="L.t"><font size="6px">&#x3008;</font></div>
+          <div id="L.t" style="visibility:hidden"><font size="6px">&#x3008;</font></div>
           <script>
             rstyle("L", false);
           </script>
         </div>
       </td>
-
-      <td>
-        <div id="BG">
+      <td width="1920" height="1080">
+        <div>
             <canvas id="bgcanv" width="1920" height="1080" hidden> </canvas>
             <script>
              // MOVED THIS UP FROM VERY BOTTOM
@@ -4402,7 +4402,7 @@
             update();
             //document.body.scrollTo(0, 0);
             //console.log(["SCROLLX", window.scrollX]);
-            console.log("Done");
+            console.log("Done - forced TD size");
             //present();
             //draw();
           </script>
