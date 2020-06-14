@@ -4031,7 +4031,8 @@
 
     self.chunkloader(MEM.cursx, MEM.cursx + MEM.windx);
     self.chunkrender(MEM.cursx, MEM.cursx + MEM.windx);
-
+   
+    console.log ("updating with x,y: "+MEM.windx+", "+MEM.windy);
     document.getElementById("BG").innerHTML =
       "<svg id='SVG' xmlns='http://www.w3.org/2000/svg' width='" +
       MEM.windx +
