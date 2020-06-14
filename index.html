@@ -3867,14 +3867,17 @@
       } else {
         if (nch.y <= MEM.chunks[0].y) {
           MEM.chunks.unshift(nch);
+          console.log ("UNSHIFT nch");
           return;
         } else if (nch.y >= MEM.chunks[MEM.chunks.length - 1].y) {
           MEM.chunks.push(nch);
+           console.log ("PUSH nch");
           return;
         } else {
           for (var j = 0; j < MEM.chunks.length - 1; j++) {
             if (MEM.chunks[j].y <= nch.y && nch.y <= MEM.chunks[j + 1].y) {
               MEM.chunks.splice(j + 1, 0, nch);
+              console.log ("SPLICE nch");
               return;
             }
           }
@@ -4028,7 +4031,7 @@
 
   function displayNew ()
   { 
-      console.log ("SPLIT to DISPLAYNEW: updating with x,y: "+MEM.windx+", "+MEM.windy);
+    console.log ("SPLIT to DISPLAYNEW: updating with x,y: "+MEM.windx+", "+MEM.windy);
     document.getElementById("BG").innerHTML =
       "<svg id='SVG' xmlns='http://www.w3.org/2000/svg' width='" +
       MEM.windx +
@@ -4047,7 +4050,8 @@
   }
   
   
-  function update() {
+    function update() {
+    
     console.log("update!")
 
     self.chunkloader(MEM.cursx, MEM.cursx + MEM.windx);
