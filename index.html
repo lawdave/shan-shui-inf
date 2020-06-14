@@ -3994,7 +3994,8 @@
         MEM.chunks[i].x < xmax + MEM.cwid
       ) {
         MEM.canv += MEM.chunks[i].canv;
-        console.log ("rendering chunk number "+i);
+        console.log ("rendering chunk number "+i+" and about to try to display it");
+        displayNew();
       }
     }
   }
