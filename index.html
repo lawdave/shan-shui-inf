@@ -4397,12 +4397,13 @@
 <!-- //MOVED from "SCRIPT WAS HERE"--> 
           <script>
             //MEM.lasttick = new Date().getTime();
-            console.log ("starting final script");
+            console.log("starting final script");
             document.getElementById("INP_SEED").value = SEED;
             document
               .getElementById("BG")
               .setAttribute("style", "width:" + MEM.windx + "px");
-            console.log ("about to update");
+            console.log("style" + "width:" + MEM.windx + "px");
+            console.log("about to update");
             update();
             //document.body.scrollTo(0, 0);
             //console.log(["SCROLLX", window.scrollX]);
