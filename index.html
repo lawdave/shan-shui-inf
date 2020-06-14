@@ -4056,7 +4056,7 @@
   
     function update() {
     
-    console.log("update! - no self")
+    console.log("update! - no self");
 
     chunkloader(MEM.cursx, MEM.cursx + MEM.windx);
     chunkrender(MEM.cursx, MEM.cursx + MEM.windx);
@@ -4402,6 +4402,7 @@
             document
               .getElementById("BG")
               .setAttribute("style", "width:" + MEM.windx + "px");
+            console.log ("about to update");
             update();
             //document.body.scrollTo(0, 0);
             //console.log(["SCROLLX", window.scrollX]);
