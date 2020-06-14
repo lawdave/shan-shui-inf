@@ -507,7 +507,8 @@
       ";stroke-width:" +
       wid +
       "'/>";
-    return canv;
+  console.log ("about to return canv: "+canv);   
+  return canv;
   }
 </script>
 
@@ -3660,7 +3661,7 @@
       });
 
       canv += hat(toGlobal(pts[1]), toGlobal(pts[2]), { fli: fli });
-
+      console.log ("about to return canv: "+canv);
       return canv;
     };
   }();
@@ -3700,7 +3701,7 @@
         },
       );
     }
-
+    console.log ("about to return canv: "+canv);
     return canv;
   }
 
