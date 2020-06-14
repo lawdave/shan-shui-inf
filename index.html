@@ -490,12 +490,12 @@
     var str = args.str != undefined ? args.str : fil;
     var wid = args.wid != undefined ? args.wid : 0;
     console.log ("stroking poly");
-    contxt.lineWidth = 1.5;
-    contxt.strokeStyle = 'red';
+   // contxt.lineWidth = 1.5;
+  //  contxt.strokeStyle = 'red';
     var canv = "<polyline points='";
     for (var i = 0; i < plist.length; i++) {
-      contxt.lineTo((plist[i][0] + xof).toFixed(1), (plist[i][1] + yof).toFixed(1));
-      contxt.stroke();
+   //   contxt.lineTo((plist[i][0] + xof).toFixed(1), (plist[i][1] + yof).toFixed(1));
+   //   contxt.stroke();
       canv +=
         " " +
         (plist[i][0] + xof).toFixed(1) +
