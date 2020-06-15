@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("top log 27b - draw frontiamge, not random image");
+  console.log ("top log 28 - test circle");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4061,6 +4061,11 @@
      // + "<circle cx='0' cy='0' r='50' stroke='black' fill='red' />"
    
      ctx.drawImage(frontImage, 0, 0, 1000,400);   // NEW CODE
+     console.log ("making a circle");        
+     ctx.beginPath();
+     ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+     ctx.stroke();
+        
     
     // viewupdate();
       
