@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("top log 41K - SVG appears to be correct - trying to test");
+  console.log ("top log 41L - fix height bug");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4049,8 +4049,8 @@
     frontImage.src=("data:image\/svg+xml;utf8,<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"" +
       MEM.windx +
       "\" height=\"" +
-      MEM.windy +
-     // "\" style=\"mix-blend-mode:multiply;\"" +
+      MEM.windy + "\" " +
+     // style=\"mix-blend-mode:multiply;\"" +
       " viewBox = \"" +
       calcViewBox() +
       "\" " +
