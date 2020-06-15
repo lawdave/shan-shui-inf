@@ -1,6 +1,6 @@
 
 <script id="PRNG">
-  console.log ("top log 54 - draw the saved SVG to the canvas");
+  console.log ("top log 55 - reorder Wikisvg - possible referral error");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4375,8 +4375,19 @@
             ctx.arc(25, 50, 50, 0, 2 * Math.PI);
             ctx.stroke();
         
+            
+              var img = new Image();
+              img.src = "http://upload.wikimedia.org/wikipedia/commons/d/d2/Svg_example_square.svg";
+              img.onload = function() {
+              ctx.drawImage(img, 0, 0);
+              }
+             
+            
+              
             console.log ("1080p 1000x400 background - above rest of script");
-            // RETORE BACKGROUND HERE 
+
+              
+              // RETORE BACKGROUND HERE 
               /* for (var i = 0; i < reso / 2 + 1; i++) {
               for (var j = 0; j < reso / 2 + 1; j++) {
                 var c = 245 + Noise.noise(i * 0.1, j * 0.1) * 10;
@@ -4397,13 +4408,7 @@
            // document.getElementById("BG").style.backgroundImage = "url(" + img + ")";
            // document.getElementsByTagName("body")[0].style.backgroundImage =
            //   "url(" + img + ")";
-
-              var img = new Image();
-              img.onload = function() {
-              ctx.drawImage(img, 0, 0);
-              }
-              img.src = "http://upload.wikimedia.org/wikipedia/commons/d/d2/Svg_example_square.svg";
-              
+  
               
           </script>
         </div>
@@ -4423,5 +4428,5 @@
 </g>
 </svg>' alt="" />
   Outside canvas:
-<img src="landscape.svg" width=1000 height=400>
+<img src="https://github.com/lawdave/shan-shui-inf/edit/canvas/landscape.svg" width=1000 height=400>
 </body>
