@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("top log 44 - are the SVGs hiding?  Make big canvas");
+  console.log ("top log 45 - are the SVGs hiding?  Embiggen the viewbox");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4016,7 +4016,8 @@
   }
 
   function calcViewBox() {
-    var zoom = 1.142;
+     // var zoom = 1.142;
+     var zoom = 1;
     return "" + MEM.cursx + " 0 " + MEM.windx / zoom + " " + MEM.windy / zoom;
   }
 
@@ -4051,9 +4052,9 @@
       "\" height=\"" +
       MEM.windy + "\" " +
      // style=\"mix-blend-mode:multiply;\"" +
-      " viewBox = \"" +
-      calcViewBox() +
-      "\" " +
+     // " viewBox = \"" +
+     // calcViewBox() +
+     //  "\" " +
       "><g id=\"G\" transform=\"translate(" +
       0 +
       ",0)\">" +
