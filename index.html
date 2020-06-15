@@ -1,6 +1,6 @@
 
 <script id="PRNG">
-  console.log ("top log 60 - something not running right");
+  console.log ("top log 61 - find the missng bracket");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4213,14 +4213,13 @@
               //draw();
    
               // NEW STUFF HERE
-              var c = document.getElementById("myCanvas");
-              var ctx = c.getContext("2d");
+              var testC = document.getElementById("myTestCanvas");
+              var testCtx = testC.getContext("2d");
               var img = document.getElementById("scream");
-              ctx.drawImage(img, 10, 10, 150, 180);
+              testCtx.drawImage(img, 10, 10, 150, 180);
 }
 </script>
-            }
-        </script>
+
 <body style="margin:0" onload="makepictures();">  
   <div
     id="SETTING"
@@ -4442,8 +4441,7 @@
 <img id="scream" width="220" height="277" src="http://upload.wikimedia.org/wikipedia/commons/d/d2/Svg_example_square.svg" alt="The Scream">
 
 <p>Canvas:</p>
-<canvas id="myCanvas" width="240" height="297" style="border:1px solid #d3d3d3;">
+<canvas id="myTestCanvas" width="240" height="297" style="border:1px solid #d3d3d3;">
 Your browser does not support the HTML5 canvas tag.
 </canvas>
-
 </body>
