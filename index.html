@@ -1,6 +1,6 @@
 
 <script id="PRNG">
-  console.log ("top log 57 - reorder Wikisvg - correct URL?");
+  console.log ("top log 59 - reorder Wikisvg - second test file?");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4426,6 +4426,24 @@
     <path d="M30.9,73c2.9,6.8,6.1,14.4,10.5,21.2c15.6,3,32-2.3,42.6-14.6C67.7,76,52.2,69.6,37.9,60.7C32,57,26.5,53,21.3,48.6   c-0.6,1.5-1.2,3-1.7,4.6C24.1,57.1,27.3,64.5,30.9,73z"/>
 </g>
 </svg>' alt="" />
-  Outside canvas:
+  <BR>
+  Outside canvas:<BR>
 <img src="https://raw.githubusercontent.com/lawdave/shan-shui-inf/canvas/landscape.svg" width=1000 height=400>
+  <BR>
+  <p>Image to use:</p>
+<img id="scream" width="220" height="277" src="http://upload.wikimedia.org/wikipedia/commons/d/d2/Svg_example_square.svg" alt="The Scream">
+
+<p>Canvas:</p>
+<canvas id="myCanvas" width="240" height="297" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+window.onload = function() {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("scream");
+  ctx.drawImage(img, 10, 10, 150, 180);
+}
+</script>
 </body>
