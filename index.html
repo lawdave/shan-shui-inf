@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("top log 41M - trying to show image again");
+  console.log ("top log 42 - hide background to show front image?");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4372,7 +4372,8 @@
             ctx.stroke();
         
             console.log ("1080p 1000x400 background - above rest of script");
-            for (var i = 0; i < reso / 2 + 1; i++) {
+            // RETORE BACKGROUND HERE 
+              /* for (var i = 0; i < reso / 2 + 1; i++) {
               for (var j = 0; j < reso / 2 + 1; j++) {
                 var c = 245 + Noise.noise(i * 0.1, j * 0.1) * 10;
                 c -= Math.random() * 20;
@@ -4386,7 +4387,9 @@
                 ctx.fillRect(i, reso - j, 1, 1);
                 ctx.fillRect(reso - i, reso - j, 1, 1);
               }
-            }
+            } // RETORE BACKGROUND HERE 
+            */ 
+              
            // var img = canvas.toDataURL("image/png");
            // document.getElementById("BG").style.backgroundImage = "url(" + img + ")";
            // document.getElementsByTagName("body")[0].style.backgroundImage =
