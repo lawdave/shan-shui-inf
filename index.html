@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("top log 41d - magic incantations -- compare to known good - circle to clear cache");
+  console.log ("top log 41e - fix space aroudn viewport");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4053,10 +4053,10 @@
       "\" style=\"mix-blend-mode:multiply;\"" +
       "viewBox = \"" +
       calcViewBox() +
-      "\"" +
-      "><g id='G' transform='translate(" +
+      "\" " +
+      "><g id=\"G\" transform='translate(" +
       0 +
-      ",0)'>" +
+      ",0)\">" +
       MEM.canv + "<\/g><\/svg>");
      // + "<circle cx='0' cy='0' r='50' stroke='black' fill='red' />"
     
