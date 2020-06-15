@@ -1,6 +1,6 @@
 
 <script id="PRNG">
-  console.log ("top log 53 - revert: colorizing did nothing");
+  console.log ("top log 54 - draw the saved SVG to the canvas");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4397,7 +4397,14 @@
            // document.getElementById("BG").style.backgroundImage = "url(" + img + ")";
            // document.getElementsByTagName("body")[0].style.backgroundImage =
            //   "url(" + img + ")";
-  
+
+              var img = new Image();
+              img.onload = function() {
+              ctx.drawImage(img, 0, 0);
+              }
+              img.src = "http://upload.wikimedia.org/wikipedia/commons/d/d2/Svg_example_square.svg";
+              
+              
           </script>
         </div>
       </td>
@@ -4414,4 +4421,7 @@
     <path d="M26.2,88.2c3.3,2,6.7,3.6,10.2,4.7c-3.5-6.2-6.3-12.6-8.8-18.5c-3.1-7.2-5.8-13.5-9-17.2c-1.9,8-2,16.4-0.3,24.7   C20.6,84.2,23.2,86.3,26.2,88.2z"/>
     <path d="M30.9,73c2.9,6.8,6.1,14.4,10.5,21.2c15.6,3,32-2.3,42.6-14.6C67.7,76,52.2,69.6,37.9,60.7C32,57,26.5,53,21.3,48.6   c-0.6,1.5-1.2,3-1.7,4.6C24.1,57.1,27.3,64.5,30.9,73z"/>
 </g>
-</svg>' alt="" /></body>
+</svg>' alt="" />
+  Outside canvas:
+<img src="landscape.svg" width=1000 height=400>
+</body>
