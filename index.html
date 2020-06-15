@@ -1,6 +1,6 @@
 
 <script id="PRNG">
-  console.log ("top log 59 - reorder Wikisvg - second test file?");
+  console.log ("top log 60 - something not running right");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4198,6 +4198,7 @@
   function makepictures() {
  
               console.log("ONLY ONE PASS starting final script");
+   
               document.getElementById("INP_SEED").value = SEED;
               document
                 .getElementById("BG")
@@ -4210,6 +4211,14 @@
               console.log("Done - forced TD size");
               //present();
               //draw();
+   
+              // NEW STUFF HERE
+              var c = document.getElementById("myCanvas");
+              var ctx = c.getContext("2d");
+              var img = document.getElementById("scream");
+              ctx.drawImage(img, 10, 10, 150, 180);
+}
+</script>
             }
         </script>
 <body style="margin:0" onload="makepictures();">  
@@ -4380,7 +4389,6 @@
               img.src = "http://upload.wikimedia.org/wikipedia/commons/d/d2/Svg_example_square.svg";
               ctx.drawImage(img, 0, 0);
              
-             
             
               
             console.log ("1080p 1000x400 background - above rest of script");
@@ -4438,12 +4446,4 @@
 Your browser does not support the HTML5 canvas tag.
 </canvas>
 
-<script>
-window.onload = function() {
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
-  var img = document.getElementById("scream");
-  ctx.drawImage(img, 10, 10, 150, 180);
-}
-</script>
 </body>
