@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("top log 31 - display image source");
+  console.log ("top log 32 - test svg");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4044,7 +4044,9 @@
     
     // DT removed below with new plan
      // document.getElementById("BG").innerHTML =
-      
+    
+    // RESTORE ME
+    /* 
     frontImage.src=
     "<svg id='SVG' xmlns='http://www.w3.org/2000/svg' width='" +
       MEM.windx +
@@ -4059,7 +4061,12 @@
       ",0)'>" +
       MEM.canv + "</g></svg>";
      // + "<circle cx='0' cy='0' r='50' stroke='black' fill='red' />"
-   
+     */
+     
+     // TEST CODE
+     frontImage.src ="<svg width=\"500\" height=\"100\"> <circle id=\"circle1\" cx=\"20\" cy=\"20\" r=\"10\" style=\"stroke: none; fill: #ff0000;\"/>
+</svg>";
+
      if (i<10)
      {
        console.log("FrontImage.src = "+frontImage.src);
