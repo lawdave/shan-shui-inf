@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("top log 20 - readding second pass correctly");
+  console.log ("top log 22 - test circle");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4163,7 +4163,7 @@
   var btnHoverCol = "rgba(0,0,0,0.1)";
 
   function makepictures() {
-              console.log("FIRST PASS starting final script");
+              console.log("ONLY ONE PASS starting final script");
               document.getElementById("INP_SEED").value = SEED;
               document
                 .getElementById("BG")
@@ -4176,15 +4176,6 @@
               console.log("Done - forced TD size");
               //present();
               //draw();
-
-              //DELETE BELOW HERE TO SCRIPT?
-              console.log("SECOND PASS THROUGH - STILL STALLED?");
-              document.getElementById("INP_SEED").value = SEED+1;
-              console.log("about to update");
-              update();
-              //document.body.scrollTo(0, 0);
-              //console.log(["SCROLLX", window.scrollX]);
-              //console.log("Done2");
             }
         </script>
 <body style="margin:0" onload="makepictures();">  
@@ -4345,12 +4336,18 @@
     <tr>
       <td width="1000" height="400">
         <div id="BG" width="1000" height="400">
-            <canvas id="bgcanv" width="1000" height="400" hidden> </canvas>
+            <canvas id="bgcanv" width="1000" height="400"> </canvas>
             <script>
              // MOVED THIS UP FROM VERY BOTTOM
             var canvas = document.getElementById("bgcanv");
             var ctx = canvas.getContext("2d");
             var reso = 1920;
+        
+            console.log ("making a circle");
+            ctx.beginPath();
+            ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+            ctx.stroke();
+        
             console.log ("1080p 1000x400 background - above rest of script");
             for (var i = 0; i < reso / 2 + 1; i++) {
               for (var j = 0; j < reso / 2 + 1; j++) {
