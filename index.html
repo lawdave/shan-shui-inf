@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("top log 43 - hide circle to show front image?");
+  console.log ("top log 44 - are the SVGs hiding?  Make big canvas");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4355,11 +4355,11 @@
     </script>
   </div>
 
-  <table width=1000 height=400 style="border-bottom: 0px solid rgba(0,0,0,0.1);">
+  <table width=1920 height=1080 style="border-bottom: 0px solid rgba(0,0,0,0.1);">
     <tr>
-      <td width="1000" height="400">
-        <div id="BG" width="1000" height="400">
-            <canvas id="bgcanv" width="1000" height="400"> </canvas>
+      <td width="1920" height="1080">
+        <div id="BG" width="1920" height="1080">
+            <canvas id="bgcanv" width="1920" height="1080"> </canvas>
             <script>
              // MOVED THIS UP FROM VERY BOTTOM
             var canvas = document.getElementById("bgcanv");
@@ -4368,7 +4368,7 @@
         
             console.log ("making a circle");
             ctx.beginPath();
-            ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+            ctx.arc(50, 50, 50, 0, 2 * Math.PI);
             ctx.stroke();
         
             console.log ("1080p 1000x400 background - above rest of script");
