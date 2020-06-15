@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("top log 23 - test canvas all canvas all the time");
+  console.log ("top log 25 - front image debug");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -3988,7 +3988,7 @@
     }
   }
 
- var frontImage = new Image();
+// var frontImage = new Image(); // FRONT IMAGE
   
   function chunkrender(xmin, xmax) {
     MEM.canv = "";
@@ -4174,8 +4174,6 @@
   }
   var btnHoverCol = "rgba(0,0,0,0.1)";
 
-  
-  
   function makepictures() {
  
               console.log("ONLY ONE PASS starting final script");
@@ -4224,14 +4222,7 @@
       <div style="display:table-cell; vertical-align: middle;">
         <font id="SET_BTN.t" size="4px"> &#x2630; </font>
       </div>
-      <script>
-        window.addEventListener("scroll", function(e) {
-          document.getElementById("SETTING").style.left = Math.max(
-            4,
-            40 - window.scrollX
-          );
-        });
-      </script>
+     
     </div>
     <div style="height:4px"></div>
     <div
