@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("top log 22 - test circle");
+  console.log ("top log 23 - test canvas all canvas all the time");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -3988,6 +3988,8 @@
     }
   }
 
+ var frontImage = new Image();
+  
   function chunkrender(xmin, xmax) {
     MEM.canv = "";
 
@@ -4037,9 +4039,14 @@
 
   function displayNew ()
   { 
-    console.log ("SPLIT to DISPLAYNEW: updating with x,y: "+MEM.windx+", "+MEM.windy);
-    document.getElementById("BG").innerHTML =
-      "<svg id='SVG' xmlns='http://www.w3.org/2000/svg' width='" +
+    console.log ("SPLIT to DISPLAYNEW - drawImage: updating with x,y: "+MEM.windx+", "+MEM.windy);
+   
+    
+    // DT removed below with new plan
+     // document.getElementById("BG").innerHTML =
+      
+    frontImage.src=
+    "<svg id='SVG' xmlns='http://www.w3.org/2000/svg' width='" +
       MEM.windx +
       "' height='" +
       MEM.windy +
@@ -4052,7 +4059,12 @@
       ",0)'>" +
       MEM.canv + "</g></svg>";
      // + "<circle cx='0' cy='0' r='50' stroke='black' fill='red' />"
-      viewupdate();
+   
+    ctx.drawImage(img, 0, 0, 1000,400);   // NEW CODE
+    
+    // viewupdate();
+      */ 
+    
   }
   
   
@@ -4162,7 +4174,10 @@
   }
   var btnHoverCol = "rgba(0,0,0,0.1)";
 
+  
+  
   function makepictures() {
+ 
               console.log("ONLY ONE PASS starting final script");
               document.getElementById("INP_SEED").value = SEED;
               document
@@ -4368,6 +4383,7 @@
             document.getElementById("BG").style.backgroundImage = "url(" + img + ")";
             document.getElementsByTagName("body")[0].style.backgroundImage =
               "url(" + img + ")";
+  
           </script>
         </div>
       </td>
