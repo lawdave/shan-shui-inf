@@ -1,5 +1,6 @@
+
 <script id="PRNG">
-  console.log ("top log 52 - colorize the good parts?");
+  console.log ("top log 53 - revert: colorizing did nothing");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -2687,8 +2688,7 @@
             return [x[0] + xoff, x[1] + yoff];
           }),
           {
-            //col: "rgba(100,100,100,0.4)",
-            col: "rgba(100,0,100,0.4)",
+            col: "rgba(100,100,100,0.4)",
             noi: 1,
             wid: wei,
             fun: function(x) {
@@ -2827,8 +2827,7 @@
             xof: xoff,
             yof: yoff,
             fil: "none",
-           // str: "rgba(100,100,100,0.5)",
-            str: "rgba(100,0,100,0.5)",
+            str: "rgba(100,100,100,0.5)",
             wid: 2,
           });
         }
@@ -2840,8 +2839,7 @@
             return [x[0] + xoff, x[1] + yoff];
           }),
           {
-            //col: "rgba(100,100,100,0.5)",
-            col: "rgba(100,0,0,0.5)",
+            col: "rgba(100,100,100,0.5)",
             noi: 0.5,
             wid: wei,
             fun: function(x) {
@@ -2932,8 +2930,7 @@
             return [x[0] + xoff, x[1] + yoff];
           }),
           {
-            //col: "rgba(100,100,100,0.4)",
-            col: "rgba(200,200,0,0.4)",
+            col: "rgba(100,100,100,0.4)",
             noi: 1,
             wid: wei,
             fun: function(x) {
@@ -4384,7 +4381,6 @@
               for (var j = 0; j < reso / 2 + 1; j++) {
                 var c = 245 + Noise.noise(i * 0.1, j * 0.1) * 10;
                 c -= Math.random() * 20;
-
                 var r = c.toFixed(0);
                 var g = (c * 0.95).toFixed(0);
                 var b = (c * 0.85).toFixed(0);
@@ -4419,4 +4415,3 @@
     <path d="M30.9,73c2.9,6.8,6.1,14.4,10.5,21.2c15.6,3,32-2.3,42.6-14.6C67.7,76,52.2,69.6,37.9,60.7C32,57,26.5,53,21.3,48.6   c-0.6,1.5-1.2,3-1.7,4.6C24.1,57.1,27.3,64.5,30.9,73z"/>
 </g>
 </svg>' alt="" /></body>
-
