@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("top log 28b - test circle");
+  console.log ("top log 30 - many circles");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4001,7 +4001,7 @@
       ) {
         MEM.canv += MEM.chunks[i].canv;
         console.log ("rendering chunk number "+i+" and about to try to display it - now showing all again");
-        displayNew();
+        displayNew(i);
       }
     }
   }
@@ -4037,10 +4037,10 @@
     return true;
   }
 
-  function displayNew ()
+  function displayNew (i)
   { 
-    console.log ("SPLIT to DISPLAYNEW - drawImage: updating with x,y: "+MEM.windx+", "+MEM.windy);
-   
+    console.log ("SPLIT to DISPLAYNEW - drawImage: updating with i = "+i+" x,y: "+MEM.windx+", "+MEM.windy);
+    
     
     // DT removed below with new plan
      // document.getElementById("BG").innerHTML =
@@ -4061,9 +4061,10 @@
      // + "<circle cx='0' cy='0' r='50' stroke='black' fill='red' />"
    
      ctx.drawImage(frontImage, 0, 0, 1000,400);   // NEW CODE
+   
      console.log ("making a circle");        
      ctx.beginPath();
-     ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+     ctx.arc(100+i, 75+i, 50, 0, 2 * Math.PI);
      ctx.stroke();
         
     
