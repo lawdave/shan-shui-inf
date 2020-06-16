@@ -1,6 +1,6 @@
 
 <script id="PRNG">
-  console.log ("top log 73 - save the first 30 but fix the URL encode issue?...");
+  console.log ("top log 74 - save the first 30 but fix the URL encode issue?...");
  //window.webkitRequestFileSystem(window.TEMPORARY, 5024*1024, SaveDatFileBro);
   var Prng = new function() {
     this.s = 1234;
@@ -4044,13 +4044,11 @@
   { 
     console.log ("SPLIT to DISPLAYNEW - drawImage: updating with i = "+i+" x,y: "+MEM.windx+", "+MEM.windy);
     
-    
     // DT removed below with new plan
      // document.getElementById("BG").innerHTML =
     
     // RESTORE ME 
-    frontImage.src=(""+
-    //  "data:image\/svg+xml;utf8," +  // REMOVE FOR DOWNLOAD
+    frontImage.src=("data:image\/svg+xml;utf8," +  
       "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"" +
       MEM.windx +
       "\" height=\"" +
@@ -4150,11 +4148,9 @@
   function download(filename, text) {
     var element = document.createElement("a");
     element.setAttribute(
-      "href",
+      "href",encodeURIComponent(text);
     //  "data:text/plain;charset=utf-8," + encodeURIComponent(text),
     //    "data:text/plain;charset=utf-8,"+text,
-      "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(text);
-    );
     element.setAttribute("download", filename);
     element.style.display = "none";
     document.body.appendChild(element);
