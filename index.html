@@ -4428,8 +4428,8 @@
             console.log ("1080p 1000x400 background - above rest of script");
 
               
-              // RETORE BACKGROUND HERE 
-              /* for (var i = 0; i < reso / 2 + 1; i++) {
+              // RESTORE BACKGROUND HERE 
+              for (var i = 0; i < reso / 2 + 1; i++) {
               for (var j = 0; j < reso / 2 + 1; j++) {
                 var c = 245 + Noise.noise(i * 0.1, j * 0.1) * 10;
                 c -= Math.random() * 20;
@@ -4443,7 +4443,7 @@
                 ctx.fillRect(reso - i, reso - j, 1, 1);
               }
             } // RETORE BACKGROUND HERE 
-            */ 
+          
               
            // var img = canvas.toDataURL("image/png");
            // document.getElementById("BG").style.backgroundImage = "url(" + img + ")";
