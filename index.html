@@ -1,7 +1,5 @@
-
-
 <script id="PRNG">
-  console.log ("101 fixing download again?");
+  console.log ("102 move content type to image?");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4051,7 +4049,7 @@
     // RESTORE ME 
     //frontImage.src=("data:image\/svg+xml;utf8,<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"" +
     frontImage.src="";
-    frontImage.src=("<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"" +
+    frontImage.src=("data:image\/svg+xml;utf8,<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"" +
      MEM.windx +
       "\" height=\"" +
       MEM.windy + "\" " +
@@ -4152,7 +4150,8 @@
     element.setAttribute(
       "href",
       //"data:text/plain;charset=utf-8," + encodeURIComponent(text),
-      " data:image/svg+xml;utf8," + encodeURIComponent(text),
+     // " data:image/svg+xml;utf8," + encodeURIComponent(text),
+        encodeURIComponent(text),
     );
     element.setAttribute("download", filename);
     element.style.display = "none";
