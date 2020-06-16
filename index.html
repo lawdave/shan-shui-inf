@@ -1,6 +1,6 @@
 
 <script id="PRNG">
-  console.log ("top log 72 - save the first 20 but fix them....");
+  console.log ("top log 73 - save the first 30 but fix the URL encode issue?...");
  //window.webkitRequestFileSystem(window.TEMPORARY, 5024*1024, SaveDatFileBro);
   var Prng = new function() {
     this.s = 1234;
@@ -4151,7 +4151,9 @@
     var element = document.createElement("a");
     element.setAttribute(
       "href",
-      "data:text/plain;charset=utf-8," + encodeURIComponent(text),
+    //  "data:text/plain;charset=utf-8," + encodeURIComponent(text),
+    //    "data:text/plain;charset=utf-8,"+text,
+      "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(text);
     );
     element.setAttribute("download", filename);
     element.style.display = "none";
