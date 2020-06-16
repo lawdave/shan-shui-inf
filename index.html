@@ -1,5 +1,5 @@
 <script id="PRNG">
-  console.log ("105 changing only downloader to remove double content encoding");
+  console.log ("106 string slice to correctly encode hopefully");
   
   //CLEAR CACHE
     //CLEAR CACHE
@@ -4154,8 +4154,7 @@
   function download(filename, text) {
     var element = document.createElement("a");
     element.setAttribute(
-      "href",encodeURIComponent(text)
-      //"data:text/plain;charset=utf-8," + encodeURIComponent(text),
+      "href","data:text/plain;charset=utf-8," + encodeURIComponent(text.slice(30)),
       //" data:image/svg+xml;utf8," + encodeURIComponent(text),
     );
     element.setAttribute("download", filename);
