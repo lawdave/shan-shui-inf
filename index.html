@@ -1,7 +1,7 @@
 
 
 <script id="PRNG">
-  console.log ("REVER TO top log 69 - download more samples");
+  console.log ("100 fixing download?");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4049,8 +4049,9 @@
      // document.getElementById("BG").innerHTML =
     
     // RESTORE ME 
-    frontImage.src=("data:image\/svg+xml;utf8,<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"" +
-      MEM.windx +
+    //frontImage.src=("data:image\/svg+xml;utf8,<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"" +
+    frontImage.src=("<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"" +
+     MEM.windx +
       "\" height=\"" +
       MEM.windy + "\" " +
      // style=\"mix-blend-mode:multiply;\"" +
@@ -4067,7 +4068,7 @@
     { 
       console.log("FrontImage.src=");
       console.log(frontImage.src);
-      download('image'+i+'.svg', frontImage.src);
+      download('image'+(i+10)+'.svg', frontImage.src);
     }
      
      // TEST CODE
@@ -4149,7 +4150,8 @@
     var element = document.createElement("a");
     element.setAttribute(
       "href",
-      "data:text/plain;charset=utf-8," + encodeURIComponent(text),
+      //"data:text/plain;charset=utf-8," + encodeURIComponent(text),
+      " data:image/svg+xml;utf8," + encodeURIComponent(text),
     );
     element.setAttribute("download", filename);
     element.style.display = "none";
