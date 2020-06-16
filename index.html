@@ -1,6 +1,7 @@
 
 <script id="PRNG">
-  console.log ("top log 70 - download more samples remove URI format");
+  console.log ("top log 71 - save the first 20....");
+ //window.webkitRequestFileSystem(window.TEMPORARY, 5024*1024, SaveDatFileBro);
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4064,10 +4065,10 @@
       MEM.canv + "<\/g><\/svg>");
      // + "<circle cx='0' cy='0' r='50' stroke='black' fill='red' />"
     
-    if (i<10)
+    if (i<20)
     { 
-      console.log("FrontImage.src=");
-      console.log(frontImage.src);
+    //  console.log("FrontImage.src=");
+    //  console.log(frontImage.src);
       download('image'+i+'.svg', frontImage.src);
     }
      
