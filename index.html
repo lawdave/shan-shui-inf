@@ -1,5 +1,5 @@
   <script id="PRNG">
-  console.log ("top log 78 - first 10 have bad filenames -- force above 10 - clear error");
+  console.log ("top log 79 -time to play find the format error");
 
     var Prng = new function() {
     this.s = 1234;
@@ -4132,9 +4132,8 @@
   
   
     function update() {
-    
+   
     console.log("update! - no self");
-
     chunkloader(MEM.cursx, MEM.cursx + MEM.windx);
     chunkrender(MEM.cursx, MEM.cursx + MEM.windx);
     console.log ("NO LAST DISPLAYNEW -- WILL IT LOAD?");
@@ -4148,7 +4147,6 @@
   function download(filename, text) {
     var element = document.createElement("a");
     element.setAttribute("href","data:text/plain;charset=utf-8," + encodeURIComponent(text));
-    //    "data:text/plain;charset=utf-8,"+text,
     element.setAttribute("download", filename);
     element.style.display = "none";
     document.body.appendChild(element);
@@ -4167,14 +4165,7 @@
     }
   }
   
-  function autoxcroll(v) {   // REMOVED BY DT
-//    if (document.getElementById("AUTO_SCROLL").checked) {
-//      xcroll(v);
-//      setTimeout(function() {
-//        autoxcroll(v);
-//      }, 2000);
-//    }
-  }
+
   function rstyle(id, b) {
     var a = b ? 0.1 : 0.0;
     document
@@ -4214,20 +4205,7 @@
   }
   var lastScrollX = 0;
   var pFrame = 0;
-  function present() {   // pulled by DT
- //   var currScrollX = window.scrollX;
- //   var step = 1;
-  //  document.body.scrollTo(Math.max(0, pFrame - 10), window.scrollY);
 
-//    pFrame += step;
-
-    //console.log([lastScrollX,currScrollX]);
-
-  //  if (pFrame < 20 || Math.abs(lastScrollX - currScrollX) < step * 2) {
-  //    lastScrollX = currScrollX;
-  //    setTimeout(present, 1);
-  //  }
-  }
   function reloadWSeed(s) {
     var u = window.location.href.split("?")[0];
     window.location.href = u + "?seed=" + s;
@@ -4442,7 +4420,7 @@
                 ctx.fillRect(i, reso - j, 1, 1);
                 ctx.fillRect(reso - i, reso - j, 1, 1);
               }
-            } // RETORE BACKGROUND HERE 
+            } // RESTORE BACKGROUND HERE 
           
               
            // var img = canvas.toDataURL("image/png");
