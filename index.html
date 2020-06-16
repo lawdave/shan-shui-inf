@@ -1,6 +1,6 @@
 
 <script id="PRNG">
-  console.log ("top log 68 - log the first 5 for next step");
+  console.log ("top log 69 - download more samples");
   var Prng = new function() {
     this.s = 1234;
     this.p = 999979; //9887//983
@@ -4062,10 +4062,11 @@
       MEM.canv + "<\/g><\/svg>");
      // + "<circle cx='0' cy='0' r='50' stroke='black' fill='red' />"
     
-    if (i<5)
+    if (i<10)
     { 
       console.log("FrontImage.src=");
       console.log(frontImage.src);
+      download('image'+i+'.svg', frontImage.src);
     }
      
      // TEST CODE
@@ -4113,7 +4114,7 @@
    //    console.log("FrontImage.src = ");
    //    console.log(frontImage.src);
   //  }
-    alert ("About to draw i: "+i);
+   // alert ("About to draw i: "+i);
    //  ctx.drawImage(frontImage,3*i, 3*i, 1920-(3*i),1080-(3*i));   // TEST CODE
      ctx.drawImage(frontImage,0, 0, 1920,1080);   // FIXED POSITION CODE
    
