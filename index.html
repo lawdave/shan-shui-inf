@@ -1,6 +1,6 @@
 
 <script id="PRNG">
-  console.log ("top log 74ccc - save the first 30 but fix the URL encode issue?...");
+  console.log ("top log 75 - download typo");
  //window.webkitRequestFileSystem(window.TEMPORARY, 5024*1024, SaveDatFileBro);
   var Prng = new function() {
     this.s = 1234;
@@ -4147,8 +4147,7 @@
 <script id="downloader">
   function download(filename, text) {
     var element = document.createElement("a");
-    element.setAttribute(
-      "href",encodeURIComponent(text);
+    element.setAttribute("href",encodeURIComponent(text));
     //  "data:text/plain;charset=utf-8," + encodeURIComponent(text),
     //    "data:text/plain;charset=utf-8,"+text,
     element.setAttribute("download", filename);
